@@ -43,6 +43,7 @@ require_relative '../config/environment'
                   player_2 = Players::Human.new(token = "X")
            end
            until game.won? || game.draw?
+           end
         game = Game.new.play
     end
   end
