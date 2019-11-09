@@ -31,6 +31,7 @@ require_relative '../config/environment'
         until game.won? || game.draw?
         game = Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"), board = Board.new).play
     end
+  end
 
     if input == "2"
       puts "Which token would you like to be? X or O"
@@ -43,8 +44,7 @@ require_relative '../config/environment'
                   player_2 = Players::Human.new(token = "X")
            end
            until game.won? || game.draw?
-           end
-        game = Game.new.play
+            game = Game.new.play
     end
   end
 
