@@ -24,9 +24,11 @@ require_relative '../config/environment'
                   player_2 = Players::Human.new(token = "O")
                   player_1 = Players::Computer.new(token = "X")
             end
+              until game.won? || game.draw?
         game = Game.new(player_1, player_2, board = Board.new).play
     end
     if input == "0"
+        until game.won? || game.draw?
         game = Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"), board = Board.new).play
     end
 
@@ -40,10 +42,11 @@ require_relative '../config/environment'
                   player_1 = Players::Human.new(token = "O")
                   player_2 = Players::Human.new(token = "X")
            end
+           until game.won? || game.draw?
         game = Game.new.play
     end
-        until game.won? || game.draw?
-          game.play
+
+
         end
 
         play_again = ""
