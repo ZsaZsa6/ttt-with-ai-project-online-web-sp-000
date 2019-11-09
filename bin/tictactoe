@@ -45,9 +45,8 @@ require_relative '../config/environment'
            until game.won? || game.draw?
         game = Game.new.play
     end
+  end
 
-
-        end
 
         play_again = ""
         until play_again.downcase == "n" || play_again.downcase == "no"
